@@ -1,6 +1,34 @@
 #include<stdio.h>
 
+void fun_1();
+void fun_2();
+
 int main(void) {
+
+    int select = 0;
+
+    printf("Please input mode 1 - 100 > ");
+    scanf("%d", &select);
+
+    switch (select)
+    {
+    case 1:
+        fun_1();
+        break;
+    
+    case 2:
+        fun_2();
+        break;
+    
+    default:
+        printf("GG");
+        break;
+    }
+
+    return 0;
+}
+
+void fun_1() {
 
     int a, b, c;
 
@@ -17,6 +45,41 @@ int main(void) {
             }
         }
     }
+}
 
-    return 0;
+void fun_2() {
+
+    double I;
+    double bonus, bonus_1, bonus_2, bonus_3, bonus_4, bonus_5;
+
+    bonus_1 = 100000 * 0.1;
+    bonus_2 = bonus_1 + 100000 * 0.075;
+    bonus_3 = bonus_2 + 200000 * 0.05;
+    bonus_4 = bonus_3 + 200000 * 0.03;
+    bonus_5 = bonus_4 + 400000 * 0.015;
+
+    printf("Please input profit > ");
+    scanf("%lf", &I);
+
+    if (I <= 100000) {
+
+        bonus = I * 0.1;
+    } else if (I <= 200000) {
+
+        bonus = bonus_1 + (I - 100000) * 0.075;  
+    } else if (I <= 400000) {
+
+        bonus = bonus_2 + (I - 200000) * 0.05;  
+    } else if (I <= 600000) {
+
+        bonus = bonus_3 + (I - 200000) * 0.03;  
+    } else if (I <= 1000000) {
+
+        bonus = bonus_4 + (I - 400000) * 0.015;  
+    } else if (I > 1000000) {
+
+        bonus = bonus_5 + (I - 400000) * 0.01;  
+    }
+
+    printf("bonus = %lf", bonus);
 }
