@@ -1,2 +1,2 @@
 # A_NEW_C
-a
+This My C project
