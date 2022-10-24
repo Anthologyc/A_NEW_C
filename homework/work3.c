@@ -11,11 +11,11 @@
 main ()
 {
 
-    int a, b; //int = [1]
+    int a, b; //int == [1]
     printf("请输入一个大于100的正整数: ");
 
-    scanf("%d", &a); //scanf = [2]
+    scanf("%d", &a); //scanf == [2]
     b = (a % 10) * 100 + ((a / 10) % 10) * 10 + (a / 100) % 10;
 
-    printf("结果是: %d\n", b); //b = [3]
+    printf("结果是: %d\n", b); //b == [3]
 }
